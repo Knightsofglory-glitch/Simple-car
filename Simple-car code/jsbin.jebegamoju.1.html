@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2023 by anonymous (http://jsbin.com/jebegamoju/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+let distance = 20 
+
+function setGas(howMuch){
+  console.log("setting gas to: ",howMuch + " distance remaining is: " + distance)
+  distance = distance - 1
+  if(howMuch >0){
+    setBreak(0)
+  }
+}
+
+function setBreak(howMuch){
+  console.log("setting break to: ",howMuch)
+  setGas(0)
+}
+
+while(distance >0){
+  if(distance >5){
+    setGas(10)
+  }else{setBreak(5)}
+  distance = distance - 1
+}
+</script>
+</body>
+</html>
